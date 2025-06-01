@@ -8,6 +8,13 @@ function enviarmensagem(event) {
     const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${msgFormatada}`;
     window.open(url, '_blank');
 }
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('.navegacao');
     if (window.scrollY > 10) {
